@@ -66,7 +66,7 @@
   }
 
   &__list {
-    @include unlist(0 (-$gap / 2) 0 0);
+    @include unlist(0 (-$gap) 0 0);
 
     @include md-min {      
       display: grid;
