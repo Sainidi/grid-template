@@ -3,7 +3,7 @@
     width: 30px;
     height: 22.5px;
     position: relative;
-    margin: 25px 0 25px auto;    
+    margin: 25px 0 25px auto;
 
     transform: rotate(0deg);
 
@@ -68,7 +68,7 @@
   &__list {
     @include unlist(0 (-$gap) 0 0);
 
-    @include md-min {      
+    @include md-min {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       justify-content: end;
@@ -81,8 +81,8 @@
       right: $gap * 1.5;
       background-color: rgba($color-gray-dark, 0.9);
       text-align: right;
-      
-      @include box-shadow; 
+
+      @include box-shadow;
     }
   }
 

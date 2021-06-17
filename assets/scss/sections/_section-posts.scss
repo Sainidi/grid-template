@@ -41,6 +41,11 @@
     & img {
       width: 100%;
     }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
   }
 
   &__caption {
@@ -49,12 +54,15 @@
     padding: $gap;
 
     & h3 {
-      font-size: 1.125rem;
       text-align: center;
+      transition: color 0.5s;
+      font-family: "Roboto Slab", serif;
     }
 
     & p {
       text-align: center;
+      transition: color 0.5s;
+      letter-spacing: normal;
     }
   }
 }

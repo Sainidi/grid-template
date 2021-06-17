@@ -44,9 +44,14 @@ h2 {
   line-height: 1.2em;
 }
 
-p,
+p {
+  color: $color-gray;
+}
+
 h3 {
-  color: $color-gray;  
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
+  color: $color-gray;
 }
 
 .btn {

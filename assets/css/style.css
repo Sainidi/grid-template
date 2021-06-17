@@ -390,8 +390,13 @@ h2 {
   line-height: 1.2em;
 }
 
-p,
+p {
+  color: #637588;
+}
+
 h3 {
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
   color: #637588;
 }
 
@@ -783,6 +788,15 @@ h3 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.form .btn--primary:hover, .form .btn--primary:focus {
+  background-color: #d66926;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  -webkit-transition: color 0.5s, border-color 0.5s;
+  -o-transition: color 0.5s, border-color 0.5s;
+  transition: color 0.5s, border-color 0.5s;
+}
+
 .form__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -813,6 +827,8 @@ h3 {
 
 .form-item__input:hover, .form-item__input:focus {
   background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 .posts {
@@ -862,6 +878,15 @@ h3 {
   width: 100%;
 }
 
+.post-item__image:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .post-item__caption {
   display: grid;
   -ms-flex-line-pack: center;
@@ -870,12 +895,19 @@ h3 {
 }
 
 .post-item__caption h3 {
-  font-size: 1.125rem;
   text-align: center;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  font-family: "Roboto Slab", serif;
 }
 
 .post-item__caption p {
   text-align: center;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  letter-spacing: normal;
 }
 
 .post-item:nth-child(1) {
@@ -926,6 +958,13 @@ h3 {
 .footer__social a {
   display: block;
   padding: 10px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer__social a:hover, .footer__social a:focus {
+  color: #d66926;
 }
 
 .footer__social::after {
