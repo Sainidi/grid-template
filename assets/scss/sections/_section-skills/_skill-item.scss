@@ -3,6 +3,10 @@
   background-color: $color-primary;
   overflow: hidden;
 
+  &__overlay {
+    opacity: 0.8;
+  }
+
   &:hover {
     .skill-item__link {
       color: $color-accent;
