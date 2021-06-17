@@ -37,6 +37,18 @@ a {
   color: $color-light;
 }
 
+h2 {
+  letter-spacing: 0.1em;
+  color: $color-primary;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
+}
+
+p,
+h3 {
+  color: $color-gray;  
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -44,6 +56,9 @@ a {
 
   letter-spacing: 0.1em;
   transition: background-color 0.5s;
+
+  border-width: 2px;
+  border-style: solid;
 
   &:hover,
   &:focus {
