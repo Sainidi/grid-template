@@ -1,11 +1,47 @@
 .posts {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  @include lg-min {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include lg-md {
+    padding-top: 77px;
+    padding-bottom: 80px;
+  }
+
+  @include md-sm {
+    padding-top: 56px;
+    padding-bottom: 60px;
+  }
+
+  @include sm {
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
 
   & h2 {
     margin-top: 0;
-    margin-bottom: 56px;
-    font-size: 2.5rem;
+
+    @include lg-min {
+      font-size: 2.5rem;
+      margin-bottom: 56px;
+    }
+
+    @include lg-md {
+      font-size: 2rem;
+      margin-bottom: 42px;
+    }
+
+    @include md-sm {
+      font-size: 1.5rem;
+      margin-bottom: 37px;
+    }
+
+    @include sm {
+      font-size: 1.5rem;
+      margin-bottom: 37px;
+      text-align: center
+    }
   }
   &__container {
     @extend %container;
@@ -15,8 +51,26 @@
     display: grid;
     padding-bottom: $gap;
     gap: $gap;
-    grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
-    grid-template-columns: repeat(4, 1fr);
+
+    @include lg-min {
+      grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include lg-md {
+      grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+      grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__actions {
@@ -26,7 +80,7 @@
 }
 
 .post-item {
-  background-color: #eeeeee;
+  background-color: #f2f2f2;  
 
   &__link {
     display: grid;
@@ -36,14 +90,20 @@
   }
 
   &__image {
-    background-color: $color-primary;
+    background-color: $color-primary; 
+    transition: 0.5s;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
 
     & img {
       width: 100%;
+      object-fit: cover;       
     }
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.1) ;
       transition: 0.5s;
     }
   }
@@ -54,14 +114,12 @@
     padding: $gap;
 
     & h3 {
-      text-align: center;
-      transition: color 0.5s;
+      text-align: center;      
       font-family: "Roboto Slab", serif;
     }
 
     & p {
-      text-align: center;
-      transition: color 0.5s;
+      text-align: center;      
       letter-spacing: normal;
     }
   }
