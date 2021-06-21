@@ -7,22 +7,25 @@
     padding-bottom: 100px;
   }
 
-  @include md-min {
-    padding-top: 88px;
-    padding-bottom: 68px;
+  @include lg-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   @include md-sm {
-    padding-top: 66px;
-    padding-bottom: 66px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   & h2 {
-    margin-top: 0;
-
     @include lg-min {
       font-size: 2.5rem;
-      margin-bottom: 59px;
+      margin-bottom: 56px;
     }
 
     @include lg-md {
@@ -32,14 +35,16 @@
 
     @include md-sm {
       font-size: 1.5rem;
-      margin-bottom: 35px;
+      margin-bottom: 36px;
     }
 
     @include sm {
       font-size: 1.5rem;
-      margin-bottom: 35px;
+      margin-bottom: 36px;
       text-align: center;
     }
+
+    @extend %h2;
   }
 
   &__container {
@@ -54,7 +59,7 @@
       grid-template-columns: 1fr 271px;
       gap: 40px;
     }
-    
+
     @include md-sm {
       grid-template-columns: 1fr 236px;
       gap: 20px;
@@ -64,44 +69,45 @@
       gap: 20px;
     }
 
-    & p:first-of-type {
-      position: relative;
-      margin-top: -5px;
-    }
-
-    & p:first-of-type:after {
-      position: absolute;
-      top: 0;
-      width: 2px;
-      height: 200px;
-      content: "";
-      background-color: rgba(99, 117, 136, 0.1);
-
-      @include lg-min {
-        right: -50px;
-      }
-
-      @include md-min {
-        right: -20px;
-      }
-
-      @include md-sm {
-        right: -10px;
-      }
-
-      @include sm {
-        display: none;
-      }
-    }
-
-    & p:last-of-type {
-      margin: 0;
-    }
     @extend %container;
   }
 
   &__content {
     & p {
+      &:first-of-type {
+        position: relative;
+        margin-top: -5px;
+      }
+
+      &:first-of-type:after {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 200px;
+        content: "";
+        background-color: rgba(99, 117, 136, 0.1);
+
+        @include lg-min {
+          right: -50px;
+        }
+
+        @include md-min {
+          right: -20px;
+        }
+
+        @include md-sm {
+          right: -10px;
+        }
+
+        @include sm {
+          display: none;
+        }
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+
       @include lg-min {
         font-size: 1.125rem;
       }

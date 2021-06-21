@@ -16,6 +16,7 @@
 
     .fab {
       font-size: 36px;
+      width: 31.5px;
     }
 
     & a {
@@ -36,7 +37,7 @@
       height: 2px;
       content: "";
       bottom: -$gap;
-      left: 47%;
+      left: calc(50% - 75px / 2);
     }
   }
 

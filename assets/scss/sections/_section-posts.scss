@@ -5,22 +5,21 @@
   }
 
   @include lg-md {
-    padding-top: 77px;
+    padding-top: 80px;
     padding-bottom: 80px;
   }
 
   @include md-sm {
-    padding-top: 56px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 
   @include sm {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  & h2 {
-    margin-top: 0;
+  & h2 {   
 
     @include lg-min {
       font-size: 2.5rem;
@@ -29,19 +28,21 @@
 
     @include lg-md {
       font-size: 2rem;
-      margin-bottom: 42px;
+      margin-bottom: 45px;
     }
 
     @include md-sm {
       font-size: 1.5rem;
-      margin-bottom: 37px;
+      margin-bottom: 36px;
     }
 
     @include sm {
       font-size: 1.5rem;
-      margin-bottom: 37px;
+      margin-bottom: 36px;
       text-align: center
     }
+
+    @extend %h2;
   }
   &__container {
     @extend %container;
