@@ -355,6 +355,10 @@ template {
   margin: auto;
 }
 
+.about h2, .posts h2 {
+  margin-top: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -726,20 +730,16 @@ h3 {
   background-color: #e5e5e5;
 }
 
-.about h2 {
-  margin-top: 0;
-}
-
 .about__container {
   display: grid;
 }
 
-.about__container p:first-of-type {
+.about__content p:first-of-type {
   position: relative;
   margin-top: -5px;
 }
 
-.about__container p:first-of-type:after {
+.about__content p:first-of-type:after {
   position: absolute;
   top: 0;
   width: 2px;
@@ -748,7 +748,7 @@ h3 {
   background-color: rgba(99, 117, 136, 0.1);
 }
 
-.about__container p:last-of-type {
+.about__content p:last-of-type {
   margin: 0;
 }
 
@@ -775,15 +775,15 @@ h3 {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .form .btn--primary:hover, .form .btn--primary:focus {
   background-color: #d66926;
   border: 2px solid #ffffff;
   cursor: pointer;
-  -webkit-transition: color 0.5s, border-color 0.5s;
-  -o-transition: color 0.5s, border-color 0.5s;
-  transition: color 0.5s, border-color 0.5s;
 }
 
 .form__container {
@@ -797,25 +797,61 @@ h3 {
   height: 60px;
   padding-right: 30px;
   padding-left: 30px;
-  color: #ffffff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
   letter-spacing: 0.15em;
-  -webkit-transition: background-color 0.5s, border-color 0.5s;
-  -o-transition: background-color 0.5s, border-color 0.5s;
-  transition: background-color 0.5s, border-color 0.5s;
+}
+
+.form-item__input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-item__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-item__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-item__input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-item__input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .form-item__input:hover, .form-item__input:focus {
   background-color: rgba(255, 255, 255, 0.15);
   border: 2px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  border-bottom-color: white;
+  outline: none;
 }
 
-.posts h2 {
-  margin-top: 0;
+.form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .posts__grid {
@@ -935,6 +971,7 @@ h3 {
 
 .footer__social .fab {
   font-size: 36px;
+  width: 31.5px;
 }
 
 .footer__social a {
@@ -956,7 +993,7 @@ h3 {
   height: 2px;
   content: "";
   bottom: -20px;
-  left: 47%;
+  left: calc(50% - 75px / 2);
 }
 
 .footer__copy span:nth-of-type(1) {
@@ -1009,11 +1046,7 @@ h3 {
     font-size: 1.25rem;
     letter-spacing: 0.1em;
   }
-  .about {
-    padding-top: 88px;
-    padding-bottom: 68px;
-  }
-  .about__container p:first-of-type:after {
+  .about__content p:first-of-type:after {
     right: -20px;
   }
   .form__container {
@@ -1043,13 +1076,13 @@ h3 {
   }
   .about h2 {
     font-size: 2.5rem;
-    margin-bottom: 59px;
+    margin-bottom: 56px;
   }
   .about__container {
     grid-template-columns: 1fr 271px;
     gap: 100px;
   }
-  .about__container p:first-of-type:after {
+  .about__content p:first-of-type:after {
     right: -50px;
   }
   .about__content p {
@@ -1085,6 +1118,10 @@ h3 {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     gap: 10px;
   }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   .about h2 {
     font-size: 2rem;
     margin-bottom: 45px;
@@ -1094,12 +1131,12 @@ h3 {
     gap: 40px;
   }
   .posts {
-    padding-top: 77px;
+    padding-top: 80px;
     padding-bottom: 80px;
   }
   .posts h2 {
     font-size: 2rem;
-    margin-bottom: 42px;
+    margin-bottom: 45px;
   }
   .posts__grid {
     grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
@@ -1151,18 +1188,18 @@ h3 {
     gap: 10px;
   }
   .about {
-    padding-top: 66px;
-    padding-bottom: 66px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .about h2 {
     font-size: 1.5rem;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
   }
   .about__container {
     grid-template-columns: 1fr 236px;
     gap: 20px;
   }
-  .about__container p:first-of-type:after {
+  .about__content p:first-of-type:after {
     right: -10px;
   }
   .form__container {
@@ -1172,12 +1209,12 @@ h3 {
     grid-column: 1 / span 2;
   }
   .posts {
-    padding-top: 56px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
   .posts h2 {
     font-size: 1.5rem;
-    margin-bottom: 37px;
+    margin-bottom: 36px;
   }
   .posts__grid {
     grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
@@ -1214,28 +1251,32 @@ h3 {
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     gap: 20px;
   }
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .about h2 {
     font-size: 1.5rem;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     text-align: center;
   }
   .about__container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .about__container p:first-of-type:after {
+  .about__content p:first-of-type:after {
     display: none;
   }
   .form__container {
     grid-template-columns: repeat(1, 1fr);
   }
   .posts {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
   .posts h2 {
     font-size: 1.5rem;
-    margin-bottom: 37px;
+    margin-bottom: 36px;
     text-align: center;
   }
   .posts__grid {
