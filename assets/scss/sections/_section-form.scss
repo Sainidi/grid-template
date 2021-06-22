@@ -60,8 +60,7 @@
         background-color: rgba($color-light, 0.15);
         border: 2px solid rgba($color-light, 0.15);
         border-bottom-color: rgba($color-light, 1);
-        outline: none;
-        color: $color-light;
+        outline: none;        
 
         &::placeholder {
           color: rgba($color-light, 0.5);

@@ -833,7 +833,6 @@ h3 {
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-bottom-color: white;
   outline: none;
-  color: #ffffff;
 }
 
 .form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
