@@ -832,6 +832,7 @@ h3 {
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-bottom-color: white;
   outline: none;
+  color: #ffffff;
 }
 
 .form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
@@ -871,6 +872,9 @@ h3 {
 
 .post-item {
   background-color: #f2f2f2;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .post-item__link {
@@ -888,21 +892,39 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  overflow: hidden;
 }
 
 .post-item__image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.post-item__image:hover {
+.post-item:hover {
+  background-color: #e5e5e5;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.post-item:hover h3,
+.post-item:hover p {
+  color: #2d3651;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.post-item:hover .post-item__image img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -921,11 +943,17 @@ h3 {
 .post-item__caption h3 {
   text-align: center;
   font-family: "Roboto Slab", serif;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .post-item__caption p {
   text-align: center;
   letter-spacing: normal;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .post-item:nth-child(1) {
